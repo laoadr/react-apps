@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import axios from "axios";
-import App from "./App.css";
+
 
 export default function Weather() {
     let [city, setCity] = useState("");
