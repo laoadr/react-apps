@@ -21,6 +21,7 @@ export default function Weather() {
         setWeather(
           <div className="text">
             <ul>
+                <li>The weather in {response.data.name} is</li>
               <li>Temperature: {Math.round(response.data.main.temp)}°F</li>
               <li>Description: {response.data.weather[0].description}</li>
               <li>Wind: {response.data.wind.speed}km/hr</li>
