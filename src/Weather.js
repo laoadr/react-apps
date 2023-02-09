@@ -21,16 +21,19 @@ export default function Weather() {
         setWeather(
           <div className="text">
             <ul>
-                <li>The weather in {response.data.name} is:</li>
-              <li>Temperature: {Math.round(response.data.main.temp)}°F</li>
-              <li>Description: {response.data.weather[0].description}</li>
-              <li>Wind: {response.data.wind.speed}km/hr</li>
-              <li>Humidity: {response.data.main.humidity}%</li>
-              <li>
-                <img
+                <li className="cityTitle">Weather results for {response.data.name}</li>
+                <br/>
+                <img className="image"
                   src={`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`}
                   alt={response.data.weather[0].description}
                 />
+                <br />
+              <li className="result">Temperature: {Math.round(response.data.main.temp)}°F</li>
+              <li className="result">Description: {response.data.weather[0].description}</li>
+              <li className="result">Wind: {response.data.wind.speed}km/hr</li>
+              <li className="result">Humidity: {response.data.main.humidity}%</li>
+              <li>
+
               </li>
             </ul>
           </div>
